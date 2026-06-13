@@ -15,7 +15,6 @@ const submitBtn     = document.getElementById('submitBtn');
 const successEl     = document.getElementById('quoteSuccess');
 const budgetWarning = document.getElementById('budgetWarning');
 const budgetWarnTxt = document.getElementById('budgetWarningText');
-const budgetMinNote = document.getElementById('budgetMinNote');
 const contactFields = document.getElementById('contactFields');
 
 // ── Helpers ───────────────────────────────────────────────────────────────────
@@ -48,10 +47,6 @@ function isBudgetTooLow(radio) {
 function updateBudgetStep() {
   const mins    = getMinutes();
   const minCost = mins * RATE_PER_MIN;
-
-  // Show dynamic minimum note
-  budgetMinNote.textContent =
-    `Based on ${mins} min × $${RATE_PER_MIN}/min — minimum estimated budget: $${minCost.toLocaleString()}`;
 
   // Dim and disable options that are too low
   document.querySelectorAll('input[name="budget"]').forEach(radio => {
