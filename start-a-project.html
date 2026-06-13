@@ -243,31 +243,42 @@
         <!-- STEP 5: Budget + contact -->
         <div class="step" data-step="5">
           <h2 class="step-title">What's your budget range?</h2>
-          <p class="step-hint mono">Helps me tailor the proposal. All ranges are welcome.</p>
+          <p class="step-hint mono" id="budgetHint">Helps me tailor the proposal.</p>
+          <p class="budget-min-note mono" id="budgetMinNote"></p>
+
           <div class="choice-grid single budget-grid">
             <label class="choice-item">
-              <input type="radio" name="budget" value="Under $500" />
+              <input type="radio" name="budget" value="Under $500" data-max="500" />
               <span class="choice-label"><strong>Under $500</strong><small>Game jams, short promos</small></span>
             </label>
             <label class="choice-item">
-              <input type="radio" name="budget" value="$500 – $2,000" />
+              <input type="radio" name="budget" value="$500 – $2,000" data-max="2000" />
               <span class="choice-label"><strong>$500 – $2,000</strong><small>Indie titles, vertical slices</small></span>
             </label>
             <label class="choice-item">
-              <input type="radio" name="budget" value="$2,000 – $5,000" />
+              <input type="radio" name="budget" value="$2,000 – $5,000" data-max="5000" />
               <span class="choice-label"><strong>$2,000 – $5,000</strong><small>Full indie releases</small></span>
             </label>
             <label class="choice-item">
-              <input type="radio" name="budget" value="$5,000+" />
+              <input type="radio" name="budget" value="$5,000+" data-max="999999" />
               <span class="choice-label"><strong>$5,000+</strong><small>Larger productions, full OST + live</small></span>
             </label>
             <label class="choice-item">
-              <input type="radio" name="budget" value="Let's discuss" />
+              <input type="radio" name="budget" value="Let's discuss" data-max="999999" />
               <span class="choice-label"><strong>Let's discuss</strong><small>I'd rather talk it through</small></span>
             </label>
           </div>
 
-          <div class="contact-fields">
+          <!-- Budget too low warning -->
+          <div class="budget-warning hidden" id="budgetWarning">
+            <span class="budget-warning-icon">✕</span>
+            <div>
+              <strong>This budget doesn't cover the scope.</strong>
+              <p id="budgetWarningText"></p>
+            </div>
+          </div>
+
+          <div class="contact-fields" id="contactFields">
             <p class="section-eyebrow mono" style="margin-top:2.5rem;">// Your details</p>
             <div class="form-row" style="margin-top:1rem;">
               <div class="form-group">

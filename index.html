@@ -180,20 +180,20 @@
     </div>
   </section>
 
-  <!-- SHOWREEL -->
+  <!-- INTRO VIDEO -->
   <section class="showreel section" id="showreel">
     <div class="container">
-      <p class="section-eyebrow mono reveal">// Showreel</p>
-      <h2 class="section-title reveal">Watch before<br/><em>you listen.</em></h2>
-      <div class="video-wrapper reveal reveal-delay-1">
-        <iframe
-          src="https://www.youtube.com/embed/bK5C4RWc6UE"
-          title="Filippo Gerbino — Composer Showreel"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen>
-        </iframe>
-      </div>
+      <p class="section-eyebrow mono reveal">// Intro</p>
+      <h2 class="section-title reveal">Before you<br/><em>hit play.</em></h2>
+    </div>
+    <div class="video-wrapper-full reveal">
+      <iframe
+        src="https://www.youtube.com/embed/bK5C4RWc6UE"
+        title="Filippo Gerbino — Who I am"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
     </div>
   </section>
 
@@ -439,32 +439,43 @@
     <div class="container">
       <p class="section-eyebrow mono reveal">// Testimonials</p>
       <h2 class="section-title reveal">From the devs<br/><em>themselves.</em></h2>
-      <div class="testimonials-grid">
+    </div>
+    <div class="testimonials-carousel reveal">
+      <div class="carousel-track" id="carouselTrack">
 
-        <div class="testimonial-card reveal reveal-delay-1">
-          <div class="testimonial-quote">"The music was incredible — serious talent. Don't let anyone tell you otherwise."</div>
+        <div class="testimonial-card">
+          <div class="testimonial-quote-mark">"</div>
+          <blockquote class="testimonial-quote">The music was incredible — serious talent. Don't let anyone tell you otherwise.</blockquote>
           <div class="testimonial-author">
             <div class="testimonial-name">Krobuc</div>
             <div class="testimonial-role mono">Developer · Astra in Ruina</div>
           </div>
         </div>
 
-        <div class="testimonial-card reveal reveal-delay-2">
-          <div class="testimonial-quote">"Thank you for the extraordinary music. It made all the difference."</div>
+        <div class="testimonial-card">
+          <div class="testimonial-quote-mark">"</div>
+          <blockquote class="testimonial-quote">Thank you for the extraordinary music. It made all the difference.</blockquote>
           <div class="testimonial-author">
-            <div class="testimonial-name">Krobuc</div>
-            <div class="testimonial-role mono">Developer · Astra in Ruina</div>
+            <div class="testimonial-name">Manuel Ferra</div>
+            <div class="testimonial-role mono">Content Creator · YouTube</div>
           </div>
         </div>
 
-        <div class="testimonial-card reveal reveal-delay-3">
-          <div class="testimonial-quote">"By far the best jam I've ever shipped on time. Everyone brought their A-game — and the soundtrack exceeded every expectation."</div>
+        <div class="testimonial-card">
+          <div class="testimonial-quote-mark">"</div>
+          <blockquote class="testimonial-quote">By far the best jam I've ever shipped on time. Everyone brought their A-game — and the soundtrack exceeded every expectation.</blockquote>
           <div class="testimonial-author">
             <div class="testimonial-name">Nemo</div>
             <div class="testimonial-role mono">Developer · Plundered</div>
           </div>
         </div>
 
+      </div>
+
+      <div class="carousel-controls">
+        <button class="carousel-btn" id="carouselPrev" aria-label="Previous">←</button>
+        <div class="carousel-dots" id="carouselDots"></div>
+        <button class="carousel-btn" id="carouselNext" aria-label="Next">→</button>
       </div>
     </div>
   </section>
